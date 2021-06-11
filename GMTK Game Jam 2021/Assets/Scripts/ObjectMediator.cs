@@ -19,6 +19,16 @@ public class ObjectMediator : MonoBehaviour
 
     public void OnInteract(GameObject presentObject)
     {
-        presentObject.transform.position =  new Vector2(presentObject.transform.position.x + 5f, presentObject.transform.position.y + 5f);
+        PresentObjectTypes type = presentObject.GetComponent<PresentInteractable>().type;
+        switch(type)
+        {
+            case PresentObjectTypes.Destroyable:
+                Destroy(presentObject);
+                break; 
+            case PresentObjectTypes.Moveable: 
+                presentObject.transform.position =  new Vector2(presentObject.transform.position.x + 5f, presentObject.transform.position.y + 5f);
+                break; 
+        }
+        
     }
 }
