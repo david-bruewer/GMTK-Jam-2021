@@ -27,4 +27,5 @@ public class PastInteractable : Interactable
         Mediator.GetComponent<ObjectMediator>().OnInteract(presentObject);
         Mediator.GetComponent<ObjectMediator>().OnInteract(gameObject);
     }
+    
 }

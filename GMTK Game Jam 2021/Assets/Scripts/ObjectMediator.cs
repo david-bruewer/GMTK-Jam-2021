@@ -60,7 +60,13 @@ public class ObjectMediator : MonoBehaviour
                     break;
                 }
 
-                presentObject.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                if (Vector2.Distance(presentObject.GetComponent<Interactable>().goal.transform.position, presentObject.transform.position) < 0.5f)
+                {
+                
+                 presentObject.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                 presentObject.GetComponent<Interactable>().goal.GetComponent<BoxCollider2D>().enabled = false;
+                 
+                }
                 break;
 
         }

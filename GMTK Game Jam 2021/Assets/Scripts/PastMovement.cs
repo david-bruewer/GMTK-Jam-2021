@@ -24,7 +24,7 @@ public class PastMovement : Movement
 
         if(Input.GetKeyDown("space") && canInteract)
         {
-             // Debug.Log("Interacted");
+            Debug.Log("Interacted");
             collision.gameObject.GetComponent<PastInteractable>().OnInteract();
         }
         
