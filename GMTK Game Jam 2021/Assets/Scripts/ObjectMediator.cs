@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectMediator : MonoBehaviour
 {
     // Start is called before the first frame update
-     public GameObject pastPlayer; 
+     //public GameObject pastPlayer; 
     void Start()
     {
         
@@ -17,7 +17,7 @@ public class ObjectMediator : MonoBehaviour
         
     }
 
-    public void OnInteract(GameObject presentObject)
+    public void OnInteract(GameObject presentObject, Movement pastPlayer, bool isPast, GameObject past)
     {
         Interactable i = presentObject.GetComponent<Interactable>();
         ObjectTypes type = i.type;
@@ -26,8 +26,13 @@ public class ObjectMediator : MonoBehaviour
             case ObjectTypes.Destroyable:
                 Destroy(presentObject);
                 break; 
-            case ObjectTypes.Moveable: 
-                switch(pastPlayer.GetComponent<Movement>().direction)
+            case ObjectTypes.Moveable:
+                if (isPast)
+                {
+                    presentObject.transform.position = past.transform.position;
+                    break;
+                }
+                switch (pastPlayer.GetComponent<Movement>().direction)
                 {
                     case Directions.Left:
                     presentObject.transform.position =  new Vector2(presentObject.transform.position.x -1f, presentObject.transform.position.y);
@@ -45,7 +50,12 @@ public class ObjectMediator : MonoBehaviour
                 
                 break; 
             case ObjectTypes.Dropper:
-                switch(pastPlayer.GetComponent<Movement>().direction)
+                if (isPast)
+                {
+                    presentObject.transform.position = past.transform.position;
+                    break;
+                }
+                switch (pastPlayer.GetComponent<Movement>().direction)
                 {
                     case Directions.Left:
                     presentObject.transform.position =  new Vector2(presentObject.transform.position.x -1f, presentObject.transform.position.y);
@@ -71,6 +81,11 @@ public class ObjectMediator : MonoBehaviour
                 break;
 
             case ObjectTypes.HoleCover:
+                if (isPast)
+                {
+                    presentObject.transform.position = past.transform.position;
+                    break;
+                }
                 switch (pastPlayer.GetComponent<Movement>().direction)
                 {
                     case Directions.Left:
