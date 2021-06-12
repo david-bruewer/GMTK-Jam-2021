@@ -8,6 +8,8 @@ public class PresentMovement : Movement
     public GameObject[] weapon; 
     bool canAttack; 
 
+    public GameObject[] enemies; 
+
     Vector2 spawnpoint; 
 
     // Start is called before the first frame update
@@ -35,7 +37,7 @@ public class PresentMovement : Movement
                     StartCoroutine(attack(weapon[1]));
                     break; 
                 case Directions.Left:
-                    StartCoroutine(attack(weapon[2]));
+                    StartCoroutine(attack(weapon[1]));
                     break; 
                 case Directions.Down:
                    StartCoroutine(attack(weapon[3]));
@@ -53,8 +55,14 @@ public class PresentMovement : Movement
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Enemy")
         {
-            Debug.Log("dead");
+            
             gameObject.transform.position = spawnpoint; 
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.active = true; 
+                enemy.transform.position = enemy.GetComponent<Enemy>().spawnpoint; 
+            }
+    
         }
     }
 
@@ -62,7 +70,7 @@ public class PresentMovement : Movement
     {
         canAttack = false; 
         weapon.SetActive(true); 
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.1f); 
         weapon.SetActive(false);
         canAttack = true; 
 
