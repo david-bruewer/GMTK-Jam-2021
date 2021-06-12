@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum ObjectTypes 
 {
-    Destroyable, Moveable, Dropper
+    Destroyable, Moveable, Dropper, HoleCover
 }

@@ -24,7 +24,8 @@ public class PastInteractable : Interactable
     public void OnInteract(){
         Debug.Log("Interacted");
 
-        Mediator.GetComponent<ObjectMediator>().OnInteract(presentObject);
+        if(presentObject) //just IN CASE we make that present player can interact =p
+            Mediator.GetComponent<ObjectMediator>().OnInteract(presentObject);
         Mediator.GetComponent<ObjectMediator>().OnInteract(gameObject);
     }
     
