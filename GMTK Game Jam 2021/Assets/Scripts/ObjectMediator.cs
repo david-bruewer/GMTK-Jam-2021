@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectMediator : MonoBehaviour
 {
     // Start is called before the first frame update
-     //public GameObject pastPlayer; 
+    //public GameObject pastPlayer; 
     void Start()
     {
         
@@ -84,6 +84,12 @@ public class ObjectMediator : MonoBehaviour
                 if (isPast)
                 {
                     presentObject.transform.position = past.transform.position;
+                    i.Enable();
+                    if (i.goal)
+                    {
+                        presentObject.GetComponent<BoxCollider2D>().enabled = false;
+                        i.goal.GetComponent<BoxCollider2D>().enabled = false;
+                    }
                     break;
                 }
                 switch (pastPlayer.GetComponent<Movement>().direction)

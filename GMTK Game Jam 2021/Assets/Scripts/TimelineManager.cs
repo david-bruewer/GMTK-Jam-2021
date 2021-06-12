@@ -5,7 +5,9 @@ using UnityEngine;
 public class TimelineManager : MonoBehaviour
 {
     public GameObject present; 
-    public GameObject past; 
+    public GameObject past;
+
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +21,27 @@ public class TimelineManager : MonoBehaviour
     }
 
     public void SwitchTimelines()
-    {   
-        if(present.active)
+    {
+        StartCoroutine(waitAnimation());
+    }
+
+    public IEnumerator waitAnimation()
+    {
+        if (present.activeSelf)
         {
+            anim.SetBool("isFuture", false);
+            yield return new WaitForSeconds(0.25f);
             present.SetActive(false);
             past.SetActive(true);
-        } else 
+        }
+        else
         {
+            anim.SetBool("isFuture", true);
+            yield return new WaitForSeconds(0.25f);
             past.SetActive(false);
             present.SetActive(true);
         }
     }
+
+
 }
