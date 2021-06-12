@@ -6,16 +6,18 @@ public class PresentMovement : Movement
 {
 
     public GameObject[] weapon; 
-    bool canAttack; 
+    public bool canAttack; 
 
     public GameObject[] enemies; 
 
     Vector2 spawnpoint; 
 
+    bool pickUp;
+
     // Start is called before the first frame update
     void Start()
     {
-        canAttack = true; 
+        //canAttack = true; 
         spawnpoint = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y); 
     }
     void Update()
@@ -28,6 +30,12 @@ public class PresentMovement : Movement
         if (Input.GetKeyDown("space") && canInteract)
         {
             collision.gameObject.GetComponent<PastInteractable>().OnInteract(this);
+        }
+
+        if(Input.GetKeyDown("space")&&pickUp)
+        {
+            canAttack = true; 
+            collision.gameObject.SetActive(false); 
         }
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
@@ -68,6 +76,10 @@ public class PresentMovement : Movement
                 enemy.transform.position = enemy.GetComponent<Enemy>().spawnpoint; 
             }
     
+        }
+        if (other.gameObject.tag == "Sword")
+        {
+            pickUp = true; 
         }
     }
 

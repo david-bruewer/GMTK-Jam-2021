@@ -72,8 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3753825769889500098, guid: b0874ea8cd71e014299f832d9aa8a4a2,
-    type: 3}
+  m_Sprite: {fileID: 776136188158623729, guid: b0874ea8cd71e014299f832d9aa8a4a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,8 +193,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3753825769889500098, guid: b0874ea8cd71e014299f832d9aa8a4a2,
-    type: 3}
+  m_Sprite: {fileID: 776136188158623729, guid: b0874ea8cd71e014299f832d9aa8a4a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -316,8 +314,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3753825769889500098, guid: b0874ea8cd71e014299f832d9aa8a4a2,
-    type: 3}
+  m_Sprite: {fileID: 776136188158623729, guid: b0874ea8cd71e014299f832d9aa8a4a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -519,12 +516,15 @@ MonoBehaviour:
   rb: {fileID: 5419170497346353648}
   direction: 0
   Mediator: {fileID: 0}
+  canInteract: 0
   animator: {fileID: 5853243411489163452}
   weapon:
   - {fileID: 5419170496800841835}
   - {fileID: 5419170496853648784}
   - {fileID: 5419170497351016756}
   - {fileID: 5419170496857265968}
+  canAttack: 0
+  enemies: []
 --- !u!95 &5853243411489163452
 Animator:
   serializedVersion: 3
@@ -616,8 +616,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3753825769889500098, guid: b0874ea8cd71e014299f832d9aa8a4a2,
-    type: 3}
+  m_Sprite: {fileID: 776136188158623729, guid: b0874ea8cd71e014299f832d9aa8a4a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
