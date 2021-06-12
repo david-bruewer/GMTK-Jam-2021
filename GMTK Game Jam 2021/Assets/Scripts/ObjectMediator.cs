@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectMediator : MonoBehaviour
 {
     // Start is called before the first frame update
-     
+     public GameObject pastPlayer; 
     void Start()
     {
         
@@ -19,14 +19,29 @@ public class ObjectMediator : MonoBehaviour
 
     public void OnInteract(GameObject presentObject)
     {
-        PresentObjectTypes type = presentObject.GetComponent<PresentInteractable>().type;
+       ObjectTypes type = presentObject.GetComponent<Interactable>().type;
         switch(type)
         {
-            case PresentObjectTypes.Destroyable:
+            case ObjectTypes.Destroyable:
                 Destroy(presentObject);
                 break; 
-            case PresentObjectTypes.Moveable: 
-                presentObject.transform.position =  new Vector2(presentObject.transform.position.x + 5f, presentObject.transform.position.y + 5f);
+            case ObjectTypes.Moveable: 
+                switch(pastPlayer.GetComponent<Movement>().direction)
+                {
+                    case Directions.Left:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x -1f, presentObject.transform.position.y);
+                    break;
+                     case Directions.Right:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x + 1f, presentObject.transform.position.y);
+                    break;
+                     case Directions.Up:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x , presentObject.transform.position.y+1f);
+                    break;
+                     case Directions.Down:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x, presentObject.transform.position.y-1f);
+                    break;
+                }
+                
                 break; 
         }
         

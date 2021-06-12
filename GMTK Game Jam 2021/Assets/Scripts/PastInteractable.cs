@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PastInteractable : MonoBehaviour
+public class PastInteractable : Interactable
 {
 
     public GameObject presentObject;
 
     public GameObject Mediator; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,6 @@ public class PastInteractable : MonoBehaviour
         Debug.Log("Interacted");
 
         Mediator.GetComponent<ObjectMediator>().OnInteract(presentObject);
+        Mediator.GetComponent<ObjectMediator>().OnInteract(gameObject);
     }
 }

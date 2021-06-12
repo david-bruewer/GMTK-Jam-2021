@@ -595,6 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1243833475}
+  direction: 0
   Mediator: {fileID: 1527003990}
 --- !u!212 &1243833477
 SpriteRenderer:
@@ -828,7 +829,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13002872, y: 0.008983791}
+  m_Offset: {x: 0.008962989, y: -0.05156219}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -839,7 +840,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.239702, y: 3.3805423}
+  m_Size: {x: 2.0201771, y: 1.8063464}
   m_EdgeRadius: 0
 --- !u!114 &1491413436
 MonoBehaviour:
@@ -853,6 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ac79cbb4261aa48878d4b4d24c5754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
   presentObject: {fileID: 2009567163}
   Mediator: {fileID: 1527003990}
 --- !u!1 &1527003990
@@ -885,6 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa51ac8835880354d8aad10f9e63e58b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pastPlayer: {fileID: 2123307475}
 --- !u!4 &1527003992
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,7 +1101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2009567163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848431d692dd5a64a9742896df8701cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d0ccdfee9c85384689b8172eafd3722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
@@ -1227,6 +1230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 2123307478}
+  direction: 0
   Mediator: {fileID: 1527003990}
 --- !u!212 &2123307480
 SpriteRenderer:

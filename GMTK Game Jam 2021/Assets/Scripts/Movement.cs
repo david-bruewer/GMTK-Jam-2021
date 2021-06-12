@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     //Movement vector
     Vector2 movement;
 
+    public Directions direction; 
+
     public GameObject Mediator; 
 
     //Animator 
@@ -59,6 +61,23 @@ public class Movement : MonoBehaviour
     {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
+
+            if(movement.x == 1)
+            {
+                direction = Directions.Right; 
+            } 
+            if(movement.x == -1)
+            {
+                direction = Directions.Left;
+            }
+            if (movement.y == 1)
+            {
+                direction = Directions.Up;
+            }
+            if (movement.y == -1)
+            {
+                direction = Directions.Down;
+            }
 
     }
 

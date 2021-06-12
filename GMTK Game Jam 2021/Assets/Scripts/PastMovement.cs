@@ -41,6 +41,7 @@ public class PastMovement : Movement
         {
             collision = col; 
             canInteract = true; 
+            
         }
     }
 

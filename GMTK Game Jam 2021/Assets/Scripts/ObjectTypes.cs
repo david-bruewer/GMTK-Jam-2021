@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PresentObjectTypes 
+public enum ObjectTypes 
 {
     Destroyable, Moveable
 }
