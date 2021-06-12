@@ -23,8 +23,11 @@ public class PresentMovement : Movement
         {
             this.SwitchTimelines();
         }
-
-        if(Input.GetKeyDown("space") && canAttack)
+        if (Input.GetKeyDown("space") && canInteract)
+        {
+            collision.gameObject.GetComponent<PastInteractable>().OnInteract(this);
+        }
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             switch(direction)
             {
@@ -51,6 +54,8 @@ public class PresentMovement : Movement
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+
+        Collided(other);
         if(other.gameObject.tag == "Enemy")
         {
             Debug.Log("dead");

@@ -17,11 +17,14 @@ public class Movement : MonoBehaviour
 
     public Directions direction; 
 
-    public GameObject Mediator; 
+    public GameObject Mediator;
+
+    public bool canInteract;
+    public Collision2D collision;
 
     //Animator 
     //[SerializeField]
-   // Animator animator;
+    // Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -29,27 +32,31 @@ public class Movement : MonoBehaviour
         
     }
   void Update() {
-      getMovement();
+        getMovement();
         if(Input.GetKeyDown("t"))
         {
             this.SwitchTimelines();
         }
-   //Updates Movement Vector 
+        if (Input.GetKeyDown("space") && canInteract)
+        {
+            collision.gameObject.GetComponent<PastInteractable>().OnInteract(this);
+        }
+        //Updates Movement Vector 
 
-            //Updates animator prevHorizontal for idle 
-            //if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-           // {
-           //     animator.SetFloat("PrevHorizontal", movement.x);
-           //     animator.SetFloat("PrevVertical", movement.y);
-           // }
+        //Updates animator prevHorizontal for idle 
+        //if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        // {
+        //     animator.SetFloat("PrevHorizontal", movement.x);
+        //     animator.SetFloat("PrevVertical", movement.y);
+        // }
 
 
 
-            //Updates Animator
-            //animator.SetFloat("Horizontal", movement.x);
-           // animator.SetFloat("Vertical", movement.y);
-            //animator.SetFloat("Speed", movement.sqrMagnitude);
-        
+        //Updates Animator
+        //animator.SetFloat("Horizontal", movement.x);
+        // animator.SetFloat("Vertical", movement.y);
+        //animator.SetFloat("Speed", movement.sqrMagnitude);
+
     }
 
     void FixedUpdate()
@@ -95,6 +102,29 @@ public class Movement : MonoBehaviour
     public void SwitchTimelines()
     {
         Mediator.GetComponent<TimelineManager>().SwitchTimelines();
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        Collided(col);
+    }
+
+    public void Collided(Collision2D col)
+    {
+        if (col.gameObject.tag == "Interactable")
+        {
+            collision = col;
+            canInteract = true;
+
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        collision = null;
+        canInteract = false;
+
     }
 }
 
