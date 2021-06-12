@@ -149,6 +149,7 @@ MonoBehaviour:
   rb: {fileID: 2718746218162456380}
   direction: 0
   Mediator: {fileID: 0}
+  animator: {fileID: 556106505193539832}
 --- !u!95 &556106505193539832
 Animator:
   serializedVersion: 3
