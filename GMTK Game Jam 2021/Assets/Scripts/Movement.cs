@@ -65,10 +65,12 @@ public class Movement : MonoBehaviour
             if(movement.x == 1)
             {
                 direction = Directions.Right; 
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
             } 
             if(movement.x == -1)
             {
                 direction = Directions.Left;
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
             if (movement.y == 1)
             {
