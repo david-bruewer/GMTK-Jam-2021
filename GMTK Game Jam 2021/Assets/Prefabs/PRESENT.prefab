@@ -260,20 +260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Present Character
       objectReference: {fileID: 0}
-    - target: {fileID: 5419170497346353653, guid: c4996e650209cfd4986d80a200cf0e33,
+    - target: {fileID: 5419170497346353654, guid: c4996e650209cfd4986d80a200cf0e33,
         type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0058840513
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419170497346353653, guid: c4996e650209cfd4986d80a200cf0e33,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.27687395
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419170497346353653, guid: c4996e650209cfd4986d80a200cf0e33,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1.4462521
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4996e650209cfd4986d80a200cf0e33, type: 3}
