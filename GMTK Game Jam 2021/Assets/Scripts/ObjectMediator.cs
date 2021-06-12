@@ -19,7 +19,8 @@ public class ObjectMediator : MonoBehaviour
 
     public void OnInteract(GameObject presentObject)
     {
-       ObjectTypes type = presentObject.GetComponent<Interactable>().type;
+        Interactable i = presentObject.GetComponent<Interactable>();
+        ObjectTypes type = i.type;
         switch(type)
         {
             case ObjectTypes.Destroyable:
@@ -63,9 +64,33 @@ public class ObjectMediator : MonoBehaviour
                 if (Vector2.Distance(presentObject.GetComponent<Interactable>().goal.transform.position, presentObject.transform.position) < 0.5f)
                 {
                 
-                 presentObject.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                 presentObject.GetComponent<Interactable>().goal.GetComponent<BoxCollider2D>().enabled = false;
+                 presentObject.GetComponent<BoxCollider2D>().enabled = false;
+                 i.goal.GetComponent<BoxCollider2D>().enabled = false;
                  
+                }
+                break;
+
+            case ObjectTypes.HoleCover:
+                switch (pastPlayer.GetComponent<Movement>().direction)
+                {
+                    case Directions.Left:
+                        presentObject.transform.position = new Vector2(presentObject.transform.position.x - 1f, presentObject.transform.position.y);
+                        break;
+                    case Directions.Right:
+                        presentObject.transform.position = new Vector2(presentObject.transform.position.x + 1f, presentObject.transform.position.y);
+                        break;
+                    case Directions.Up:
+                        presentObject.transform.position = new Vector2(presentObject.transform.position.x, presentObject.transform.position.y + 1f);
+                        break;
+                    case Directions.Down:
+                        presentObject.transform.position = new Vector2(presentObject.transform.position.x, presentObject.transform.position.y - 1f);
+                        break;
+                }
+                i.Enable();
+                if (i.goal)
+                {
+                    presentObject.GetComponent<BoxCollider2D>().enabled = false;
+                    i.goal.GetComponent<BoxCollider2D>().enabled = false;
                 }
                 break;
 
