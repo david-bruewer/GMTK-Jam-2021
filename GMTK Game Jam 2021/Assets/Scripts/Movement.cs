@@ -62,15 +62,17 @@ public class Movement : MonoBehaviour
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
+            Vector3 characterScale = transform.localScale;
+
             if(movement.x == 1)
             {
                 direction = Directions.Right; 
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                characterScale.x = 1;
             } 
             if(movement.x == -1)
             {
                 direction = Directions.Left;
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
+                characterScale.x = -1;
             }
             if (movement.y == 1)
             {
@@ -80,6 +82,8 @@ public class Movement : MonoBehaviour
             {
                 direction = Directions.Down;
             }
+
+            transform.localScale = characterScale;
 
     }
 
