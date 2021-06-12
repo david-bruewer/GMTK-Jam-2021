@@ -116,11 +116,16 @@ public class Movement : MonoBehaviour
 
     public void Collided(Collision2D col)
     {
+        
         if (col.gameObject.tag == "Interactable")
         {
             collision = col;
             canInteract = true;
 
+        }
+        if (col.gameObject.tag == "Sword")
+        {
+            collision = col; 
         }
     }
 

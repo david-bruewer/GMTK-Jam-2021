@@ -6,14 +6,18 @@ public class PresentMovement : Movement
 {
 
     public GameObject[] weapon; 
-    bool canAttack; 
+    public bool canAttack; 
+
+    public GameObject[] enemies; 
 
     Vector2 spawnpoint; 
+
+    bool pickUp;
 
     // Start is called before the first frame update
     void Start()
     {
-        canAttack = true; 
+        //canAttack = true; 
         spawnpoint = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y); 
     }
     void Update()
@@ -27,6 +31,12 @@ public class PresentMovement : Movement
         {
             collision.gameObject.GetComponent<PastInteractable>().OnInteract(this);
         }
+
+        if(Input.GetKeyDown("space")&&pickUp)
+        {
+            canAttack = true; 
+            collision.gameObject.SetActive(false); 
+        }
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
             switch(direction)
@@ -38,7 +48,7 @@ public class PresentMovement : Movement
                     StartCoroutine(attack(weapon[1]));
                     break; 
                 case Directions.Left:
-                    StartCoroutine(attack(weapon[2]));
+                    StartCoroutine(attack(weapon[1]));
                     break; 
                 case Directions.Down:
                    StartCoroutine(attack(weapon[3]));
@@ -58,8 +68,18 @@ public class PresentMovement : Movement
         Collided(other);
         if(other.gameObject.tag == "Enemy")
         {
-            Debug.Log("dead");
+            
             gameObject.transform.position = spawnpoint; 
+            foreach (GameObject enemy in enemies)
+            {
+                enemy.active = true; 
+                enemy.transform.position = enemy.GetComponent<Enemy>().spawnpoint; 
+            }
+    
+        }
+        if (other.gameObject.tag == "Sword")
+        {
+            pickUp = true; 
         }
     }
 
@@ -67,7 +87,7 @@ public class PresentMovement : Movement
     {
         canAttack = false; 
         weapon.SetActive(true); 
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.1f); 
         weapon.SetActive(false);
         canAttack = true; 
 

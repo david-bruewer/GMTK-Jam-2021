@@ -8,6 +8,7 @@ TagManager:
   - Goal
   - Enemy
   - Hole
+  - Sword
   layers:
   - Default
   - TransparentFX
