@@ -43,6 +43,26 @@ public class ObjectMediator : MonoBehaviour
                 }
                 
                 break; 
+            case ObjectTypes.Dropper:
+                switch(pastPlayer.GetComponent<Movement>().direction)
+                {
+                    case Directions.Left:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x -1f, presentObject.transform.position.y);
+                    break;
+                     case Directions.Right:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x + 1f, presentObject.transform.position.y);
+                    break;
+                     case Directions.Up:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x , presentObject.transform.position.y+1f);
+                    break;
+                     case Directions.Down:
+                    presentObject.transform.position =  new Vector2(presentObject.transform.position.x, presentObject.transform.position.y-1f);
+                    break;
+                }
+
+                presentObject.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                break;
+
         }
         
     }
