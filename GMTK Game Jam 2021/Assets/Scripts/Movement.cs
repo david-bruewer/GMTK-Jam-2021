@@ -24,7 +24,9 @@ public class Movement : MonoBehaviour
 
     //Animator 
     //[SerializeField]
-    // Animator animator;
+
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +91,8 @@ public class Movement : MonoBehaviour
             {
                 direction = Directions.Down;
             }
+
+            animator.SetFloat("Moving", movement.sqrMagnitude);
 
             transform.localScale = characterScale;
 
