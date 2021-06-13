@@ -6,6 +6,8 @@ public class ObjectMediator : MonoBehaviour
 {
     // Start is called before the first frame update
     //public GameObject pastPlayer; 
+    public AudioSource pushAudio; 
+    public AudioSource destroyAudio; 
     void Start()
     {
         
@@ -24,12 +26,17 @@ public class ObjectMediator : MonoBehaviour
         switch(type)
         {
             case ObjectTypes.Destroyable:
+                destroyAudio.Play();
                 if(past)
                     Destroy(presentObject);
                 else
                     i.DestroyMe(); 
                 break; 
             case ObjectTypes.Moveable:
+                if(pushAudio != null)
+                {
+                    pushAudio.Play();
+                }
                 if (isPast)
                 {
                     presentObject.transform.position = past.transform.position;

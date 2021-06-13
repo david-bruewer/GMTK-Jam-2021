@@ -35,7 +35,7 @@ public class PresentMovement : Movement
         if(Input.GetKeyDown("space")&&pickUp)
         {
             canAttack = true; 
-            collision.gameObject.SetActive(false); 
+            collision.gameObject.SetActive(false);
         }
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
