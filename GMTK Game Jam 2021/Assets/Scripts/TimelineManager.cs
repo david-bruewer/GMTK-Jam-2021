@@ -29,14 +29,14 @@ public class TimelineManager : MonoBehaviour
     {
         if (present.activeSelf)
         {
-            anim.SetBool("isFuture", false);
+            anim.SetTrigger("Past");
             yield return new WaitForSeconds(0.25f);
             present.SetActive(false);
             past.SetActive(true);
         }
         else
         {
-            anim.SetBool("isFuture", true);
+            anim.SetTrigger("Future");
             yield return new WaitForSeconds(0.25f);
             past.SetActive(false);
             present.SetActive(true);

@@ -34,17 +34,39 @@ public class Interactable : MonoBehaviour
     {
         goal.GetComponent<BoxCollider2D>().enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        particle.SetActive(false);
-        particle.SetActive(true);
+        if (particle)
+        {
+            particle.SetActive(false);
+            particle.SetActive(true);
+        }
     }
 
     public void Enable()
     {
-        particle.SetActive(false);
+        if(particle)
+            particle.SetActive(false);
         if (goal)
             goal.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
         noGoal();
+    }
+
+    public void DestroyMe()
+    {
+        Debug.Log(this);
+        StartCoroutine(effectToDestroy());
+    }
+
+    public IEnumerator effectToDestroy()
+    {
+        if (particle)
+        {
+            particle.SetActive(false);
+            particle.SetActive(true);
+        }
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
 
 
