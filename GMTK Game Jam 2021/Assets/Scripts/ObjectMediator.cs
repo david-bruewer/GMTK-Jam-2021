@@ -110,6 +110,7 @@ public class ObjectMediator : MonoBehaviour
                 i.Enable();
                 if (i.goal)
                 {
+                    Debug.Log("is this useful?");
                     presentObject.GetComponent<BoxCollider2D>().enabled = false;
                     i.goal.GetComponent<BoxCollider2D>().enabled = false;
                 }
