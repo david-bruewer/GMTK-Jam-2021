@@ -10,6 +10,7 @@ public class PresentMovement : Movement
 
     public GameObject[] enemies; 
 
+    public AudioSource attackSound; 
     Vector2 spawnpoint; 
 
     bool pickUp;
@@ -23,6 +24,10 @@ public class PresentMovement : Movement
     void Update()
     {
         this.getMovement();
+        if(Input.GetKeyDown("escape"))
+        {
+            menu.SetActive(true);
+        }
         if(Input.GetKeyDown("t"))
         {
             this.SwitchTimelines();
@@ -34,12 +39,16 @@ public class PresentMovement : Movement
 
         if(Input.GetKeyDown("space")&&pickUp)
         {
-            canAttack = true;
-            pickUp = false;
-            collision.gameObject.SetActive(false); 
+            if (collision.gameObject.tag == "Sword")
+            {
+                canAttack = true;
+                pickUp = false;
+                collision.gameObject.SetActive(false); 
+            }
         }
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
+            attackSound.Play();
             switch(direction)
             {
                 case Directions.Up:

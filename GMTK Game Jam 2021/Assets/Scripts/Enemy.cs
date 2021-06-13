@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public Vector2 spawnpoint;
     public GameObject particle;
 
+    public AudioSource death; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator Dying()
     {
+        death.Play();
         particle.SetActive(false);
         particle.SetActive(true);
         GetComponent<SpriteRenderer>().enabled = false;

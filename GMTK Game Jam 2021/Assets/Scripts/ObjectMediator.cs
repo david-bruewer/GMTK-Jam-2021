@@ -8,6 +8,8 @@ public class ObjectMediator : MonoBehaviour
     //public GameObject pastPlayer; 
     public AudioSource pushAudio; 
     public AudioSource destroyAudio; 
+
+    public AudioSource fillHole; 
     void Start()
     {
         
@@ -97,6 +99,7 @@ public class ObjectMediator : MonoBehaviour
                     i.Enable();
                     if (i.goal)
                     {
+                        fillHole.Play();
                         presentObject.GetComponent<BoxCollider2D>().enabled = false;
                         i.goal.GetComponent<BoxCollider2D>().enabled = false;
                     }
