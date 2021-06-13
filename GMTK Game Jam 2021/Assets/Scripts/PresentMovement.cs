@@ -81,7 +81,10 @@ public class PresentMovement : Movement
         {
             gameObject.transform.position = spawnpoint; 
             foreach (GameObject enemy in enemies)
-            {
+            {   
+                enemy.SetActive(true);
+                enemy.GetComponent<SpriteRenderer>().enabled = true;
+                enemy.GetComponent<BoxCollider2D>().enabled = true;
                 enemy.active = true; 
                 enemy.transform.position = enemy.GetComponent<Enemy>().spawnpoint; 
             }
