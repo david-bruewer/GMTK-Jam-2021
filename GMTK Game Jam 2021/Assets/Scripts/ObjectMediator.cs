@@ -24,7 +24,10 @@ public class ObjectMediator : MonoBehaviour
         switch(type)
         {
             case ObjectTypes.Destroyable:
-                Destroy(presentObject);
+                if(past)
+                    Destroy(presentObject);
+                else
+                    i.DestroyMe(); 
                 break; 
             case ObjectTypes.Moveable:
                 if (isPast)
