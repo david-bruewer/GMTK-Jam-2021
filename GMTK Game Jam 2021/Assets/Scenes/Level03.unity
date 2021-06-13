@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 126050853}
   - component: {fileID: 126050852}
   - component: {fileID: 126050855}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DecourV1_6 (2)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -15338,7 +15338,7 @@ GameObject:
   - component: {fileID: 612620493}
   - component: {fileID: 612620492}
   - component: {fileID: 612620494}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DecourV1_6 (1)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -30023,7 +30023,7 @@ GameObject:
   - component: {fileID: 941679759}
   - component: {fileID: 941679758}
   - component: {fileID: 941679760}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DecourV1_6
   m_TagString: Interactable
   m_Icon: {fileID: 0}
