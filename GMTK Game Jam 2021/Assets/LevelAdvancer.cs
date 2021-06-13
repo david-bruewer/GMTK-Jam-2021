@@ -24,11 +24,11 @@ public class LevelAdvancer : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(present.active == true)
-        {   
-            StartCoroutine(advance());  
+        if (present.active == true)
+        {
+            StartCoroutine(advance());
         }
     }
 

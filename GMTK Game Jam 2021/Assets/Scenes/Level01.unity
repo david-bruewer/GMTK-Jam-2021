@@ -5309,8 +5309,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280738953
-  m_fontColor: {r: 0.5372549, g: 0.8941177, b: 0.14901961, a: 1}
+    rgba: 2548873
+  m_fontColor: {r: 0.5372549, g: 0.8941177, b: 0.14901961, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6149,10 +6149,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Advance
       objectReference: {fileID: 0}
+    - target: {fileID: 8653991711965394836, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.43
+      value: 0.43000007
       objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
@@ -6167,17 +6172,17 @@ PrefabInstance:
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
@@ -8834,9 +8839,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   goal: {fileID: 0}
-  particle: {fileID: 0}
+  particle: {fileID: 157515434}
   presentObject: {fileID: 0}
-  Mediator: {fileID: 0}
+  Mediator: {fileID: 1684559891}
 --- !u!212 &1137539907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11715,8 +11720,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 15807879
-  m_fontColor: {r: 0.52965367, g: 0.20914915, b: 0.9433962, a: 0}
+    rgba: 4293997959
+  m_fontColor: {r: 0.52965367, g: 0.20914915, b: 0.9433962, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
