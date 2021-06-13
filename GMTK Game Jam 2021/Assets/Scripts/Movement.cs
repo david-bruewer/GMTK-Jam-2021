@@ -22,6 +22,8 @@ public class Movement : MonoBehaviour
     public bool canInteract;
     public Collision2D collision;
 
+    public GameObject menu; 
+
     //Animator 
     //[SerializeField]
 
@@ -35,6 +37,10 @@ public class Movement : MonoBehaviour
     }
   void Update() {
         getMovement();
+        if(Input.GetKeyDown("escape"))
+        {
+            menu.SetActive(true);
+        }
         if(Input.GetKeyDown("t"))
         {
             this.SwitchTimelines();

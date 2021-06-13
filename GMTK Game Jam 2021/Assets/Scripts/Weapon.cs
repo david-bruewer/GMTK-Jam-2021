@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            other.gameObject.SetActive(false);
+            other.GetComponent<Enemy>().Die();
         }    
     }
 }
