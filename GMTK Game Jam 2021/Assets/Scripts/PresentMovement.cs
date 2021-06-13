@@ -34,7 +34,8 @@ public class PresentMovement : Movement
 
         if(Input.GetKeyDown("space")&&pickUp)
         {
-            canAttack = true; 
+            canAttack = true;
+            pickUp = false;
             collision.gameObject.SetActive(false); 
         }
         if (Input.GetMouseButtonDown(0) && canAttack)
@@ -68,7 +69,6 @@ public class PresentMovement : Movement
         Collided(other);
         if(other.gameObject.tag == "Enemy")
         {
-            
             gameObject.transform.position = spawnpoint; 
             foreach (GameObject enemy in enemies)
             {
