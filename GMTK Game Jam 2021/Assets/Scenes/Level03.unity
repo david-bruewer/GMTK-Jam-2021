@@ -5610,7 +5610,7 @@ RectTransform:
   m_GameObject: {fileID: 401809461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3127, y: 2.3127, z: 2.3127}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 2.3127}
   m_Children:
   - {fileID: 981906572}
   - {fileID: 104998558}
@@ -5623,7 +5623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -193, y: 142}
+  m_AnchoredPosition: {x: -124, y: 83}
   m_SizeDelta: {x: 100, y: 99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &408876819 stripped
@@ -31329,9 +31329,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 10.558092, y: 29.849274}
-  - {x: 2.6117442, y: 29.822605}
-  - {x: -2.485671, y: 29.853498}
+  - {x: 10.474411, y: 28.970434}
+  - {x: 2.7581854, y: 28.964691}
+  - {x: -2.5275111, y: 28.953733}
   - {x: -2.4421065, y: 20.866062}
   - {x: 0.5392022, y: 20.828243}
   - {x: 0.50419784, y: 9.521368}
@@ -31343,7 +31343,7 @@ EdgeCollider2D:
   - {x: 7.5446863, y: 8.951237}
   - {x: 7.535291, y: 20.827982}
   - {x: 10.508427, y: 20.892614}
-  - {x: 10.525042, y: 29.867947}
+  - {x: 10.525042, y: 28.968182}
 --- !u!4 &1420546049
 Transform:
   m_ObjectHideFlags: 0
@@ -41982,7 +41982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -47262,6 +47262,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8653991711385782162, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.241
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653991711385782162, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.011
+      objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394835, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
       propertyPath: m_Name
@@ -47271,6 +47281,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653991711965394836, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00019592047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653991711965394836, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.40131223
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653991711965394836, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08042431
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653991711965394836, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.3564968
       objectReference: {fileID: 0}
     - target: {fileID: 8653991711965394837, guid: ea6411de64cad4749ad62e99e0b07513,
         type: 3}
