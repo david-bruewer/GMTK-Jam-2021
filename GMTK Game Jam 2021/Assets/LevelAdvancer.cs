@@ -26,8 +26,8 @@ public class LevelAdvancer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (present.active == true)
-        {
+        if (present.active == true && collision.gameObject.tag == "Player")
+        {        
             StartCoroutine(advance());
         }
     }

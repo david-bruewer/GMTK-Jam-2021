@@ -10193,6 +10193,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1783061556}
+    - target: {fileID: 696455175137201167, guid: 827d222313eca9a45ac6c3a5c8835eb6,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 696455175137201170, guid: 827d222313eca9a45ac6c3a5c8835eb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13912,7 +13917,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324823355}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -16113,6 +16118,11 @@ PrefabInstance:
       propertyPath: present
       value: 
       objectReference: {fileID: 1180490146}
+    - target: {fileID: 8653991711965394838, guid: ea6411de64cad4749ad62e99e0b07513,
+        type: 3}
+      propertyPath: nextLevel
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6411de64cad4749ad62e99e0b07513, type: 3}
 --- !u!1 &1355350346
@@ -19990,7 +20000,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722459173}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -49769,7 +49779,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5657038710291947442}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
