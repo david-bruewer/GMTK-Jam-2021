@@ -24,7 +24,10 @@ public class ObjectMediator : MonoBehaviour
         switch(type)
         {
             case ObjectTypes.Destroyable:
-                Destroy(presentObject);
+                if(past)
+                    Destroy(presentObject);
+                else
+                    i.DestroyMe(); 
                 break; 
             case ObjectTypes.Moveable:
                 if (isPast)
@@ -110,6 +113,7 @@ public class ObjectMediator : MonoBehaviour
                 i.Enable();
                 if (i.goal)
                 {
+                    Debug.Log("is this useful?");
                     presentObject.GetComponent<BoxCollider2D>().enabled = false;
                     i.goal.GetComponent<BoxCollider2D>().enabled = false;
                 }
