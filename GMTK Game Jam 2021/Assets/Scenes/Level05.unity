@@ -34841,6 +34841,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &673860148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 696455175137201171, guid: 827d222313eca9a45ac6c3a5c8835eb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1872409670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &693150863
 GameObject:
   m_ObjectHideFlags: 0
@@ -44776,6 +44782,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735921053}
   m_CullTransparentMesh: 0
+--- !u!1 &772246982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 696455175137201171, guid: 827d222313eca9a45ac6c3a5c8835eb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2089365084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786759965
 GameObject:
   m_ObjectHideFlags: 0
@@ -45691,6 +45703,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1004543104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 696455175137201171, guid: 827d222313eca9a45ac6c3a5c8835eb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 871685263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1030953235
 GameObject:
   m_ObjectHideFlags: 0
@@ -46091,6 +46109,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1283358004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 696455175137201171, guid: 827d222313eca9a45ac6c3a5c8835eb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1695858385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1298176570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 696455175137201171, guid: 827d222313eca9a45ac6c3a5c8835eb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576143646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1299874428 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 553308179668903975, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
@@ -52284,7 +52314,7 @@ PrefabInstance:
     - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
         type: 3}
       propertyPath: enemies.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
         type: 3}
@@ -52295,12 +52325,42 @@ PrefabInstance:
         type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 408876819}
+      objectReference: {fileID: 1004543104}
     - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
         type: 3}
       propertyPath: canAttack
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 408876819}
+    - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 1283358004}
+    - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: enemies.Array.data[3]
+      value: 
+      objectReference: {fileID: 1298176570}
+    - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: enemies.Array.data[4]
+      value: 
+      objectReference: {fileID: 673860148}
+    - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: 772246982}
+    - target: {fileID: 7945167055082146140, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: enemies.Array.data[6]
+      value: 
+      objectReference: {fileID: 1004543104}
     - target: {fileID: 7945167055082146141, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
         type: 3}
       propertyPath: m_WasSpriteAssigned
