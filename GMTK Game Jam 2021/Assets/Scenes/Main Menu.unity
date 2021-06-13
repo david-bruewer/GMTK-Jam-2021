@@ -943,8 +943,9 @@ PrefabInstance:
     - target: {fileID: 6650254352209618244, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
       propertyPath: m_text
-      value: "wasd - move\n\nt - travel through time\n\nspace - interact with certain
-        objects \n\nleft click - attack (present only)"
+      value: "esc - menu \n\nwasd - move\n\nt - travel through time\n\nspace - interact
+        with certain objects \n\nleft click - attack (future only, if you have a
+        weapon) "
       objectReference: {fileID: 0}
     - target: {fileID: 6650254352209618244, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
@@ -954,12 +955,12 @@ PrefabInstance:
     - target: {fileID: 6650254352209618244, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
       propertyPath: m_fontSize
-      value: 24
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6650254352209618244, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 24
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6650254352209618244, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
@@ -1039,12 +1040,12 @@ PrefabInstance:
     - target: {fileID: 6650254352209618245, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6650254352209618245, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -24
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6650254352209618245, guid: be593927e2e7d4375a9d1a0c7917cf39,
         type: 3}
