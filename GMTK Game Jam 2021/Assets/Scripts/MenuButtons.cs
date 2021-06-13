@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
@@ -24,5 +25,15 @@ public class MenuButtons : MonoBehaviour
   public void back(GameObject buttonParent)
   {
       buttonParent.SetActive(false);
+  }
+
+  public void loadLevel(int i)
+  {
+      SceneManager.LoadScene(i);
+  }
+
+  public void restart()
+  {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
   }
 }

@@ -340,6 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &153015252
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &333473891
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &384596568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!114 &384596572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,11 +1145,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4369171484629015918, guid: b374a448378807449a89338cbd2ae82d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439062805782959021, guid: b374a448378807449a89338cbd2ae82d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 588013345}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b374a448378807449a89338cbd2ae82d, type: 3}
 --- !u!4 &471647526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3926822870367775446, guid: b374a448378807449a89338cbd2ae82d,
+    type: 3}
+  m_PrefabInstance: {fileID: 471647525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &588013345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4369171484629015914, guid: b374a448378807449a89338cbd2ae82d,
     type: 3}
   m_PrefabInstance: {fileID: 471647525}
   m_PrefabAsset: {fileID: 0}
@@ -1235,6 +1255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &623579560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &837727474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,6 +3567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   goal: {fileID: 0}
+  particle: {fileID: 0}
   presentObject: {fileID: 1137539904}
   Mediator: {fileID: 1684559891}
 --- !u!1 &915634673
@@ -3824,6 +3847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &1137539904
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,6 +3895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   goal: {fileID: 0}
+  particle: {fileID: 0}
   presentObject: {fileID: 0}
   Mediator: {fileID: 1684559891}
 --- !u!212 &1137539907
@@ -4259,6 +4284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &1326798961
 GameObject:
   m_ObjectHideFlags: 0
@@ -6405,6 +6431,16 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.9375
       objectReference: {fileID: 0}
+    - target: {fileID: 7945167055082146142, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.5625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945167055082146142, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.9375
+      objectReference: {fileID: 0}
     - target: {fileID: 8784066586978798592, guid: 3fd3bb4ecfb0cc147b90bb5780ef8e6d,
         type: 3}
       propertyPath: m_Name
@@ -6583,6 +6619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   goal: {fileID: 0}
+  particle: {fileID: 0}
 --- !u!1 &1902113186
 GameObject:
   m_ObjectHideFlags: 0
