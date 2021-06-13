@@ -11,7 +11,7 @@ public class PresentMovement : Movement
     public GameObject[] enemies; 
 
     public AudioSource attackSound; 
-    Vector2 spawnpoint; 
+    Vector3 spawnpoint; 
 
     bool pickUp;
 
@@ -19,7 +19,7 @@ public class PresentMovement : Movement
     void Start()
     {
         //canAttack = true; 
-        spawnpoint = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y); 
+        spawnpoint = gameObject.transform.position; 
     }
     void Update()
     {
@@ -71,6 +71,7 @@ public class PresentMovement : Movement
     void FixedUpdate() 
     {
         this.updatePosition();
+         
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
