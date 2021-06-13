@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 6729517490803006964
     second: Running_1LR_3
+  - first:
+      213: -8682849477565878438
+    second: Running_1LR_0
+  - first:
+      213: 1023508692725212898
+    second: Running_1LR_1
+  - first:
+      213: -2832168682875994445
+    second: Running_1LR_2
+  - first:
+      213: -2578310530751780575
+    second: Running_1LR_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,9 +126,9 @@ TextureImporter:
       name: Running_1LR_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 48
-        width: 13
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -125,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b15270e276a14f8e0800000000000000
-      internalID: -1660673332136696549
+      spriteID: a5fef736762508780800000000000000
+      internalID: -8682849477565878438
       vertices: []
       indices: 
       edges: []
@@ -135,51 +147,9 @@ TextureImporter:
       name: Running_1LR_1
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 32
-        width: 13
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d967a1e5e1cf626e0800000000000000
-      internalID: -1862524188513110371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Running_1LR_2
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 0
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51d09a1b0707d13b0800000000000000
-      internalID: -5540148337276547819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Running_1LR_3
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 16
-        width: 13
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,8 +158,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd571dd08c046d50800000000000000
-      internalID: 6729517490803006964
+      spriteID: 2e62966bbbb343e00800000000000000
+      internalID: 1023508692725212898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running_1LR_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beb031a69d12b8d0800000000000000
+      internalID: -2832168682875994445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Running_1LR_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12924e59b30083cd0800000000000000
+      internalID: -2578310530751780575
       vertices: []
       indices: 
       edges: []
